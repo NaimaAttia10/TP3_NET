@@ -1,0 +1,64 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    @model TP3F.Models.Person
+}
+@{
+    ViewData["Title"] = "LIST ALL PERSONS";
+}
+
+
+
+@{
+    TP3F.Models.Person p = Model;
+    if (Model == null)
+    {
+        <h1>
+           Cet ID est invalide
+        </h1>
+    }
+    else
+    {
+        <h1>persons @Model.id</h1>
+        <dl class="row">
+            <dt class="col-sm-2">
+                id
+            </dt>
+            <dd class="col-sm-10">
+                @p.id
+            </dd>
+            <dt class="col-sm-2">
+                first_name
+            </dt>
+            <dd class="col-sm-10">
+                @p.first_name
+            </dd>
+            <dt class="col-sm-2">
+                last_name
+            </dt>
+            <dd class="col-sm-10">
+                @p.last_name
+            </dd>
+            <dt class="col-sm-2">
+                email
+            </dt>
+            <dd class="col-sm-10">
+                @p.email
+            </dd>
+            <dt class="col-sm-2">
+                image
+            </dt>
+            <dd class="col-sm-10">
+                @p.image
+            </dd>
+            <dt class="col-sm-2">
+                country
+            </dt>
+            <dd class="col-sm-10">
+                @p.country
+            </dd>
+       </dl>
+    
+    }
+}
